@@ -1,36 +1,36 @@
 {
-  "name": "nozol-shared",
+  "name": "@rstechs/nozol-shared",
   "version": "1.0.0",
   "description": "Nozol shared module",
   "main": "index.js",
-  "sails": {
-    "isHook": true
-  },
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
-    "test": ""
+    "test": "",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "preversion": "echo pre version",
+    "version": "echo version",
+    "postversion": "echo post version"
   },
-  "devDependencies": {
-    "istanbul": "^0.4.5",
-    "lodash": "^3.10.1",
-    "node-test-helper": "^1.0.0",
-    "sails-factory": "0.4.0",
-    "sails": "~0.11.0",
-    "sails-build-dictionary": "^0.10.1",
-    "sails-disk": "^0.10.10",
-    "waterline": "^0.11.9"
-  },
-  "author": "",
+  "author": "rstech",
   "license": "",
   "dependencies": {
     "@sentry/node": "^6.2.0",
     "@sentry/tracing": "^6.2.0",
     "amqplib": "^0.5.2",
-    "axios": "^0.21.1",
-    "mocha": "^3.4.2",
-    "moment": "^2.18.1",
-    "moment-timezone": "^0.5.13"
+    "axios": "^0.21.1"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.2"
   }
 }
