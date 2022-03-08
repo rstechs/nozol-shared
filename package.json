@@ -12,9 +12,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepublishOnly": "npm run build",
-    "preversion": "echo pre version",
-    "version": "echo version",
-    "postversion": "echo post version"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "author": "rstech",
   "license": "",
