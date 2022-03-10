@@ -4,7 +4,9 @@
       "module": "commonjs",
       "declaration": true,
       "outDir": "./lib",
-      "strict": true
+      "strict": true,
+		  "noImplicitAny": false /* issue an error on any variables whose type is implicitly inferred as any*/,
+
     },
     "include": ["src"],
     "exclude": ["node_modules", "**/__tests__/*"]

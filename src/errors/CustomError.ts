@@ -5,7 +5,7 @@ export class CustomError extends Error {
 	public isTrusted: boolean;
 
 
-	constructor(name: string, message: string, code: string, data: any, isTrusted: boolean) {
+	constructor(name: string, message: string, code: string, data: any = {}, isTrusted: boolean) {
 		super(message);
 
 		if (!message || !code) {
@@ -17,7 +17,7 @@ export class CustomError extends Error {
 		this.data = data;
 		this.isTrusted = isTrusted;
 
-		//@ts-ignore
+		// @ts-ignore
 		Error.captureStackTrace(this, this.constructor);
 	}
 }
