@@ -1,4 +1,4 @@
-import _ from "lodash";
+import { isObject } from "lodash";
 
 
 export default abstract class EnumGroup {
@@ -51,7 +51,7 @@ function translateObject(self, obj, language) {
 function trnslateValue(translationKeyPrefix, value: any, language) {
 
 	let valueFullObject = {};
-	if (_.isObject(value)) {
+	if (isObject(value)) {
 		valueFullObject = { ...value };
 		value = value["id"];
 	}
