@@ -2,7 +2,7 @@ import { isEqual } from "lodash";
 import { DomainEvents, IDomainEvent } from "../events"
 
 
-export default abstract class Entity {
+export abstract class Entity {
 	private __modifications = new Set();
 	protected id?: string;
 	abstract validate(param?: any): void;

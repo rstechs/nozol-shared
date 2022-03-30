@@ -1,5 +1,5 @@
-import Entity from "./Entity";
-import Enum from "./Enum";
-import EnumGroup from "./EnumGroup";
+export { Entity } from "./Entity";
+export { Enum } from "./Enum";
+export { EnumGroup } from "./EnumGroup";
+export { Notable, INotes } from "./Notable";
 
-export { Entity, Enum, EnumGroup };

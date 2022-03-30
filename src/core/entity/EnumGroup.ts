@@ -1,7 +1,7 @@
 import { isObject } from "lodash";
 
 
-export default abstract class EnumGroup {
+export abstract class EnumGroup {
 	static translate(data, language) {
 
 		if (Array.isArray(data)) {

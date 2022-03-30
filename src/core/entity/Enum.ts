@@ -1,4 +1,4 @@
-export default abstract class Enum {
+export abstract class Enum {
 	static __cls: { [x: string]: string[] } = {};
 
 	static entries(): string[][] {
