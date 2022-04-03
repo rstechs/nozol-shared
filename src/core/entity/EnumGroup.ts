@@ -34,7 +34,7 @@ function translateObject(self, obj, language) {
 		const toBeTranslatedAttr = self[capitalize(attr)] || self.__additionalTranslationKeys && self.__additionalTranslationKeys.find(k => k.attr == attr);
 
 		if (toBeTranslatedAttr) {
-			const translationKeyPrefix = toBeTranslatedAttr.__translationKeyPrefix || `${self.name.toLowerCase()}.enum.${attr}`;
+			const translationKeyPrefix = toBeTranslatedAttr.__translationKeyPrefix || `${self.name.toLowerCase().replace("enums", "")}.enum.${attr}`;
 
 			if (Array.isArray(value)) {
 				translatedObject[attr] = value.map(v => trnslateValue(translationKeyPrefix, v, language));

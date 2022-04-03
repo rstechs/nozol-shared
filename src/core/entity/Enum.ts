@@ -5,7 +5,7 @@ export abstract class Enum {
 		return Object.entries(this).filter(([k, v]) => !/^__.*/.test(k));
 	}
 
-	static values(): string[] {
+	static values(): any[] {
 		return this.entries().map((a) => a[1]);
 	}
 
