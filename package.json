@@ -1,6 +1,6 @@
 {
   "name": "@rstechs/nozol-shared",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Nozol shared module",
   "main": "index.js",
   "files": [
