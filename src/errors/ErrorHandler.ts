@@ -10,7 +10,7 @@ import { CustomError } from "./CustomError";
 
 export class ErrorHandler {
 
-    handleError(err: CustomError) {
+    static handleError(err: CustomError) {
         if (Array.isArray(err)) {
             err = err[0];
         }
@@ -49,7 +49,7 @@ export class ErrorHandler {
         }
     }
 
-    isTrustedError(err: CustomError) {
+    static isTrustedError(err: CustomError) {
         // console.log("instanceof Error", err instanceof Error)
         // console.log("instanceof CustomError", err instanceof CustomError)
         // console.log("instanceof NotPermittedError", err instanceof NotPermittedError)
